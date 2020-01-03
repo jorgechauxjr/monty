@@ -1,9 +1,9 @@
 #ifndef _MONTY_H_
 #define _MONTY_H_
 
-#include<stdio.h>
-#include<stdlib.h>
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -37,5 +37,6 @@ typedef struct instruction_s
 /* error_handler functions */
 void error_arguments(void);
 void open_error(char **);
+void invalidInstructionc_error(char *invInstruction, unsigned int line);
 
 #endif /* _MONTY_H_ */
