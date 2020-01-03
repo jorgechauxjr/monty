@@ -1,12 +1,12 @@
 #include "monty.h"
 /**
- * push -push (add) node to list.
+ * push_stack -push (add) node to list.
  *Description: Function that push a new node at the beginning of stack_t stack
  * @top: element at the top of the stack (head)
  * @n: constant int value in the structure
  * Return: the address of the new element or NULL if fail (the new node)
  **/
-stack_t *push(stack_t **top, const int n)
+stack_t *push_stack(stack_t **top, const int n)
 {
 	stack_t *newNode;
 
