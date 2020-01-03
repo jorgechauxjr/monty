@@ -1,4 +1,5 @@
 #include "monty.h"
+extern int number;
 /**
  * push_stack -push (add) node to list.
  *Description: Function that push a new node at the beginning of stack_t stack
@@ -6,16 +7,18 @@
  * @n: constant int value in the structure
  * Return: the address of the new element or NULL if fail (the new node)
  **/
-stack_t *push_stack(stack_t **top, const int n)
+void push_stack(stack_t **top, unsigned int line_number)
 {
+
 	stack_t *newNode;
 
+	(void) line_number;
 	newNode = malloc(sizeof(stack_t));
 
 	if (newNode == NULL)
-		return (NULL);
+		exit(EXIT_FAILURE);
 
-	newNode->n = n;
+	newNode->n = number;
 	newNode->prev = NULL;
 
 /* validate if empty list */
@@ -23,12 +26,10 @@ stack_t *push_stack(stack_t **top, const int n)
 	{
 		newNode->next = NULL;
 		*top = newNode;
-		return (newNode);
+	        
 	}
 /* if is not empty list */
 	newNode->next = *top;
 	(*top)->prev = newNode;
 	*top = newNode;
-
-	return (newNode);
 }

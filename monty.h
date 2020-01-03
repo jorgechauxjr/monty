@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+extern int n;
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -40,12 +41,12 @@ void open_error(char **);
 void invalidInstruction_error(char *invInstruction, unsigned int line);
 
 /* executer functions*/
-void open_and_read(char **argv);
+int open_and_read(char **argv);
 
 /*opcodes */
-void (get_operation_code(char *token)) (stack_t **top, unsigned int line);
+void (*get_op_code(char *token, unsigned int line)) (stack_t **, unsigned int);
 
 /* Stack */
-stack_t *push_stack(stack_t **top, const int n);
+void push_stack(stack_t **top, unsigned int line_number);
 
 #endif /* _MONTY_H_ */
