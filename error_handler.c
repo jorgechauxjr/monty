@@ -23,9 +23,10 @@ void open_error(char **argv)
 	exit(EXIT_FAILURE);
 }
 /**
- * open_error -Main entry
- *Description: print message if its not possible to open the file
- * @argv: arguments received by main, ni this case te filename
+ * invalidInstruction_error -Main entry
+ *Description: print message if le to open the filehas an invalid instruction
+ * @invInstruction: instruction
+ * @line: line
  * Return: void
  **/
 void invalidInstruction_error(char *invInstruction, unsigned int line)
