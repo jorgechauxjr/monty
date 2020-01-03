@@ -22,3 +22,14 @@ void open_error(char **argv)
 	fprintf(stderr, "Error: Can't open file %s\n", filename);
 	exit(EXIT_FAILURE);
 }
+/**
+ * open_error -Main entry
+ *Description: print message if its not possible to open the file
+ * @argv: arguments received by main, ni this case te filename
+ * Return: void
+ **/
+void invalidInstruction_error(char *invInstruction, unsigned int line)
+{
+	fprintf(stderr, "L%u: unknown instruction %s\n", line, invInstruction);
+	exit(EXIT_FAILURE);
+}
