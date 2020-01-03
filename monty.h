@@ -37,6 +37,6 @@ typedef struct instruction_s
 /* error_handler functions */
 void error_arguments(void);
 void open_error(char **);
-void invalidInstructionc_error(char *invInstruction, unsigned int line);
+void invalidInstruction_error(char *invInstruction, unsigned int line);
 
 #endif /* _MONTY_H_ */
