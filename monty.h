@@ -39,4 +39,7 @@ void error_arguments(void);
 void open_error(char **);
 void invalidInstruction_error(char *invInstruction, unsigned int line);
 
+/* executer functions*/
+void open_and_read(**argv);
+
 #endif /* _MONTY_H_ */
