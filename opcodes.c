@@ -4,17 +4,16 @@
  * @token: operation code
  * Return: void
  */
-int (get_operation_code(char *token)) (stack_t **top, unsigned int line)
+void (get_operation_code(char *token)) (stack_t **top, unsigned int line)
 {
 	int i;
 	instruction_t operation[] = {
-		{"push", push},
-		{"pall", pall},
+		{"push", push_stack},
 		{NULL, NULL}
 	};
 	for (i = 0; operations[i].opcode != NULL; i++)
 	{
-		if (strcmp(token, operations[i].opcode) == 0)
+		if (strcmp(token, operation[i].opcode) == 0)
 		{
 			return (operation[i].f);
 		}
