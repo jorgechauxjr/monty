@@ -5,7 +5,7 @@ extern int number;
  *Description: Function that push a new node at the beginning of stack_t stack
  * @top: element at the top of the stack (head)
  * @n: constant int value in the structure
- * Return: the address of the new element or NULL if fail (the new node)
+ * Return: void
  **/
 void push_stack(stack_t **top, unsigned int line_number)
 {
@@ -26,10 +26,30 @@ void push_stack(stack_t **top, unsigned int line_number)
 	{
 		newNode->next = NULL;
 		*top = newNode;
-	        
+
 	}
 /* if is not empty list */
 	newNode->next = *top;
 	(*top)->prev = newNode;
 	*top = newNode;
+}
+/**
+ * pall_stack -print.
+ *Description: Function that print the elements of a stack
+ * @top: element at the top of the stack (head)
+ * @n: constant int value in the structure
+ * Return: void
+ **/
+void pall_stack(stack_t **top, unsigned int line_number)
+{
+	stack_t *tmp = *top;
+
+	(void)line_number;
+
+	while(tmp != NULL)
+	{
+		printf("%d\n", tmp->n);
+		tmp = tmp->next;
+	}
+
 }

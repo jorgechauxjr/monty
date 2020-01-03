@@ -33,7 +33,8 @@ int open_and_read(char **argv)
 /*p_func will receive the function to execute*/
 	p_func = get_op_code(token, line_counter);
 
+/* p_func takes the place of the function to execute: push, pall, etc*/
 	p_func(top, line_counter);
-
+	pall_stack(top, line_counter);
 	return 0;
 }
