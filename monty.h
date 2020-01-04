@@ -43,6 +43,9 @@ void invalidInstruction_error(char *invInstruction, unsigned int line);
 void not_int_err(unsigned int line);
 void malloc_error(void);
 
+/* error handler 2 */
+void pint_error(unsigned int line);
+
 /* executer functions*/
 void open_and_read(char **argv);
 int is_number(char *token);
@@ -55,5 +58,6 @@ void _nop(stack_t **top, unsigned int line);
 void push_stack(stack_t **top, unsigned int line_number);
 void pall_stack(stack_t **top, unsigned int line_number);
 void free_stack(stack_t *top);
+void pint_stack(stack_t **top, unsigned int line_number);
 
 #endif /* _MONTY_H_ */

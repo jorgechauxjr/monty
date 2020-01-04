@@ -70,3 +70,20 @@ void free_stack(stack_t *top)
 	}
 	free(top);
 }
+/**
+ * pint_stack -print.
+ * Description: Function that print the valueat top of stack
+ * @top: element at the top of the stack (head)
+ * @line_number: constant int value in the structure
+ * Return: void
+ **/
+void pint_stack(stack_t **top, unsigned int line_number)
+{
+	stack_t *tmp = *top;
+
+	if (tmp != NULL)
+	{
+		printf("%d\n", tmp->n);
+	}
+	pint_error(line_number);
+}
