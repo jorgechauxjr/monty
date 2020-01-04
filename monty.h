@@ -49,6 +49,7 @@ int is_number(char *token);
 
 /*opcodes */
 void (*get_op_code(char *token, unsigned int line)) (stack_t **, unsigned int);
+void _nop(stack_t **top, unsigned int line);
 
 /* Stack */
 void push_stack(stack_t **top, unsigned int line_number);
