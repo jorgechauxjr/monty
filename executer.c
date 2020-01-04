@@ -1,5 +1,11 @@
 #include "monty.h"
 extern int number;
+/**
+ * open_and_read -main entry.
+ *Description:Function that open, read and execute.
+ * @argv: arguments received by parameter
+ * Return: void
+ **/
 void open_and_read(char **argv)
 {
 /* prototype from struct instructions*/
@@ -17,22 +23,24 @@ void open_and_read(char **argv)
 	if (fp == NULL)
 		open_error(argv);
 
-	while((line_size = getline(&buf, &len, fp)) != EOF)
-        {
-                token = strtok(buf, " ");
+	while ((line_size = getline(&buf, &len, fp)) != EOF)
+	{
+		token = strtok(buf, "\n\t\r ");
 		strcpy(command, token);
 		if (strcmp(token, "push") == 0)
 		{
-			token = strtok(NULL," ");
+			token = strtok(NULL, " ");
 			number = atoi(token);
-          /*p_func will receive the function to execute*/
-	p_func = get_op_code(command, line_counter);
-     /* p_func takes the place of the function to execute: push, pall, etc*/
-	p_func(&top, line_counter);
+			/*p_func will receive the function to execute*/
+			p_func = get_op_code(command, line_counter);
+      /* p_func takes the place of the function to execute: push, pall, etc*/
+			p_func(&top, line_counter);
 		}
-
-                line_counter++;
-        }
-
-	 pall_stack(&top, line_counter);
+		else
+		{
+			p_func = get_op_code(token, line_counter);
+			p_func(&top, line_counter);
+		}
+		line_counter++;
+	}
 }

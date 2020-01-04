@@ -1,7 +1,8 @@
 #include "monty.h"
 /**
- * get_operation_code - contain the function that will perform the operation
+ * get_op_code - contain the function that will perform the operation
  * @token: operation code
+ * @line: line readed
  * Return: void
  */
 void (*get_op_code(char *token, unsigned int line)) (stack_t **, unsigned int)
@@ -21,5 +22,5 @@ void (*get_op_code(char *token, unsigned int line)) (stack_t **, unsigned int)
 		}
 	}
 	invalidInstruction_error(token, line);
-	return NULL;
+	return (NULL);
 }
