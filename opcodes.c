@@ -10,6 +10,7 @@ void (*get_op_code(char *token, unsigned int line)) (stack_t **, unsigned int)
 	int i;
 	instruction_t operation[] = {
 		{"push", push_stack},
+		{"pall", pall_stack},
 		{NULL, NULL}
 	};
 	for (i = 0; operation[i].opcode != NULL; i++)
