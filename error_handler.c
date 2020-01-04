@@ -45,3 +45,13 @@ void not_int_err(unsigned int line)
 	fprintf(stderr, "L%u: usage: push integer\n", line);
 	exit(EXIT_FAILURE);
 }
+/**
+ * malloc_error -Main entry
+ *Description: print message if cant malloc anymore
+ * Return: void
+ **/
+void malloc_error(void)
+{
+	fprintf(stderr, "Error: malloc failed\n");
+	exit(EXIT_FAILURE);
+}

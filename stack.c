@@ -15,7 +15,8 @@ void push_stack(stack_t **top, unsigned int line_number)
 	newNode = malloc(sizeof(stack_t));
 
 	if (newNode == NULL)
-		exit(EXIT_FAILURE);
+		malloc_error();
+
 	newNode->n = number;
 	newNode->prev = NULL;
 	if (*top == NULL)  /* validate if empty stack */

@@ -41,6 +41,7 @@ void error_arguments(void);
 void open_error(char **);
 void invalidInstruction_error(char *invInstruction, unsigned int line);
 void not_int_err(unsigned int line);
+void malloc_error(void);
 
 /* executer functions*/
 void open_and_read(char **argv);
