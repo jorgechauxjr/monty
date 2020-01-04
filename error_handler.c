@@ -35,7 +35,7 @@ void invalidInstruction_error(char *invInstruction, unsigned int line)
 	exit(EXIT_FAILURE);
 }
 /**
- * not_int_error -Main entry
+ * not_int_err -Main entry
  *Description: print message if parameter received is not integer
  * @line: line
  * Return: void

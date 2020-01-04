@@ -48,7 +48,7 @@ void open_and_read(char **argv)
 	free_stack(top);
 }
 /**
- * is_a_number - check if string received is int or not
+ * is_number - check if string received is int or not
  * @token: string to check
  * Return: -1 if sring is not int or 1 if yes
  */
