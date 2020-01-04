@@ -49,5 +49,6 @@ void (*get_op_code(char *token, unsigned int line)) (stack_t **, unsigned int);
 /* Stack */
 void push_stack(stack_t **top, unsigned int line_number);
 void pall_stack(stack_t **top, unsigned int line_number);
+void free_stack(stack_t *top);
 
 #endif /* _MONTY_H_ */

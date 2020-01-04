@@ -43,4 +43,9 @@ void open_and_read(char **argv)
 		}
 		line_counter++;
 	}
+	fclose(fp);
+
+	if (buf != NULL)
+		free(buf);
+	free_stack(top);
 }

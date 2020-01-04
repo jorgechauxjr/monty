@@ -48,3 +48,24 @@ void pall_stack(stack_t **top, unsigned int line_number)
 		tmp = tmp->next;
 	}
 }
+/**
+ * free_stack -free list.
+ *Description: Function that frees a dlist_t list
+ * @top: top of the stack. (head)
+ * Return: void
+ **/
+void free_stack(stack_t *top)
+{
+	stack_t *temp;
+
+	if (top == NULL)
+		return;
+
+	while (top != NULL)
+	{
+		temp = top;
+		top = top->next;
+		free(temp);
+	}
+	free(top);
+}
