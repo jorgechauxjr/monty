@@ -34,3 +34,14 @@ void invalidInstruction_error(char *invInstruction, unsigned int line)
 	fprintf(stderr, "L%u: unknown instruction %s\n", line, invInstruction);
 	exit(EXIT_FAILURE);
 }
+/**
+ * not_int_error -Main entry
+ *Description: print message if parameter received is not integer
+ * @line: line
+ * Return: void
+ **/
+void not_int_err(unsigned int line)
+{
+	fprintf(stderr, "L%u: usage: push integer\n", line);
+	exit(EXIT_FAILURE);
+}

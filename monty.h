@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 extern int n;
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -39,9 +40,11 @@ typedef struct instruction_s
 void error_arguments(void);
 void open_error(char **);
 void invalidInstruction_error(char *invInstruction, unsigned int line);
+void not_int_err(unsigned int line);
 
 /* executer functions*/
 void open_and_read(char **argv);
+int is_number(char *token);
 
 /*opcodes */
 void (*get_op_code(char *token, unsigned int line)) (stack_t **, unsigned int);
