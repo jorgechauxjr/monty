@@ -41,7 +41,7 @@ void open_error(char **);
 void invalidInstruction_error(char *invInstruction, unsigned int line);
 
 /* executer functions*/
-int open_and_read(char **argv);
+void open_and_read(char **argv);
 
 /*opcodes */
 void (*get_op_code(char *token, unsigned int line)) (stack_t **, unsigned int);
