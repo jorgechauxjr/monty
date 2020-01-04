@@ -96,8 +96,8 @@ void pint_stack(stack_t **top, unsigned int line_number)
 void pop_stack(stack_t **top, unsigned int line_number)
 {
 	stack_t *tmp;
-	tmp = *top;
 
+	tmp = *top;
 	if (*top == NULL)
 		pop_error(line_number);
 
