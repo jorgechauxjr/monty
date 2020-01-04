@@ -82,8 +82,7 @@ void pint_stack(stack_t **top, unsigned int line_number)
 	stack_t *tmp = *top;
 
 	if (tmp != NULL)
-	{
 		printf("%d\n", tmp->n);
-	}
-	pint_error(line_number);
+	else
+		pint_error(line_number);
 }
