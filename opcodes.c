@@ -35,14 +35,3 @@ void (*get_op_code(char *token, unsigned int line)) (stack_t **, unsigned int)
 	invalidInstruction_error(token, line);
 	return (NULL);
 }
-/**
- * _nop - doesn’t do anything.
- * @top: top of the stack (head)
- * @line: line
- * Return: void
- */
-void _nop(stack_t **top, unsigned int line)
-{
-	(void) top;
-	(void) line;
-}
