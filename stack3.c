@@ -1,4 +1,4 @@
-#include "monty.h"
+B#include "monty.h"
 /**
  *_mod -main entry.
  *Description: module of the second top element of the stack by the top element
@@ -100,13 +100,8 @@ void _pchar(stack_t **top, unsigned int line_number)
 
 	ascii_num = (*top)->n;
 
-	if (ascii_num > 0 || ascii_num < 127)
-	{
-		putchar(ascii_num);
-		putchar('\n');
-	}
-	else
-	{
+	if (ascii_num < 0 || ascii_num > 127)
 		pchar_error(line_number);
-	}
+	putchar(ascii_num);
+	putchar('\n');
 }
