@@ -46,6 +46,6 @@ void add_error(unsigned int line)
  */
 void sub_error(unsigned int line)
 {
-	fprintf(stderr, "L%u: can't add, stack too short\n", line);
+	fprintf(stderr, "L%u: can't sub, stack too short\n", line);
 	exit(EXIT_FAILURE);
 }
