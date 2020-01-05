@@ -36,6 +36,6 @@ void (*get_op_code(char *token, unsigned int line)) (stack_t **, unsigned int)
  */
 void _nop(stack_t **top, unsigned int line)
 {
-	(void)top;
-	(void)line;
+	(void) top;
+	(void) line;
 }
