@@ -32,6 +32,8 @@ void rotl_stack(stack_t **top, unsigned int line_number)
 {
 	stack_t *new_top, *tmp, *new_last;
 
+	(void)line_number;
+
 	if (*top == NULL || (*top != NULL && (*top)->next == NULL))
 		return;
 
@@ -42,11 +44,9 @@ void rotl_stack(stack_t **top, unsigned int line_number)
 		tmp = tmp->next;
 
 	new_top = (*top)->next;
-	new_top->prev = NULL;
 	new_last->next = NULL;
 	new_last->prev = tmp; /*here tmp is the last element of the stack*/
 	tmp->next = new_last;
+	new_top->prev = NULL;
 	*top = new_top;
-
-	(void)line_number;
 }
