@@ -50,6 +50,10 @@ void swap_error(unsigned int line);
 void add_error(unsigned int line);
 void sub_error(unsigned int line);
 
+/* error_handler3 */
+void div_error(unsigned int line);
+void div_error2(unsigned int line);
+
 /* executer functions*/
 void open_and_read(char **argv);
 int is_number(char *token);
@@ -69,5 +73,6 @@ void pop_stack(stack_t **top, unsigned int line_number);
 void _swap(stack_t **top, unsigned int line);
 void _add(stack_t **top, unsigned int line);
 void _sub(stack_t **top, unsigned int line_number);
+void _div(stack_t **top, unsigned int line_number);
 
 #endif /* _MONTY_H_ */

@@ -18,6 +18,7 @@ void (*get_op_code(char *token, unsigned int line)) (stack_t **, unsigned int)
 		{"nop", _nop},
 		{"add", _add},
 		{"sub", _sub},
+		{"div", _div},
 		{NULL, NULL}
 	};
 	for (i = 0; operation[i].opcode != NULL; i++)
