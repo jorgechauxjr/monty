@@ -24,6 +24,8 @@ void open_and_read(char **argv)
 	{
 		token = strtok(buf, "\n\t\r ");
 		strcpy(command, token);
+		if (is_comment(token, line_counter) == 1)
+			continue;
 		if (strcmp(token, "push") == 0)
 		{
 			token = strtok(NULL, "\n\t\r ");
@@ -37,8 +39,6 @@ void open_and_read(char **argv)
 		}
 		else
 		{
-			if (is_comment(token, line_counter) == 1)
-				continue;
 			p_func = get_op_code(token, line_counter);
 			p_func(&top, line_counter);
 		}
