@@ -42,11 +42,11 @@ void rotl_stack(stack_t **top, unsigned int line_number)
 		tmp = tmp->next;
 
 	new_top = (*top)->next;
-	*top = new_top;
 	new_top->prev = NULL;
 	new_last->next = NULL;
 	new_last->prev = tmp; /*here tmp is the last element of the stack*/
 	tmp->next = new_last;
+	*top = new_top;
 
 	(void)line_number;
 }
