@@ -54,6 +54,7 @@ void sub_error(unsigned int line);
 void div_error(unsigned int line);
 void div_error2(unsigned int line);
 void mul_error(unsigned int line);
+void mod_error(unsigned int line);
 
 /* executer functions*/
 void open_and_read(char **argv);
@@ -76,5 +77,8 @@ void _add(stack_t **top, unsigned int line);
 void _sub(stack_t **top, unsigned int line_number);
 void _div(stack_t **top, unsigned int line_number);
 void _mul(stack_t **top, unsigned int line);
+
+/* stack 3 */
+void _mod(stack_t **top, unsigned int line_number);
 
 #endif /* _MONTY_H_ */

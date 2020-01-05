@@ -30,3 +30,13 @@ void mul_error(unsigned int line)
 	fprintf(stderr, "L%u: can't mul, stack too short\n", line);
 	exit(EXIT_FAILURE);
 }
+/**
+ * mod_error - Error if the stack contains less than two elements
+ * @line: The function´s parameter
+ * Return: void
+ */
+void mod_error(unsigned int line)
+{
+	fprintf(stderr, "L%u: can't mod, stack too short\n", line);
+	exit(EXIT_FAILURE);
+}
