@@ -81,5 +81,6 @@ void _mul(stack_t **top, unsigned int line);
 /* stack 3 */
 void _mod(stack_t **top, unsigned int line_number);
 void rotl_stack(stack_t **top, unsigned int line_number);
+void rotr_stack(stack_t **top, unsigned int line_number);
 
 #endif /* _MONTY_H_ */
