@@ -27,7 +27,8 @@ void pop_error(unsigned int line)
 void swap_error(unsigned int line)
 {
 	fprintf(stderr, "L%u: can't swap, stack too short\n", line);
-	exit(EXIT_FAILURE);}
+	exit(EXIT_FAILURE);
+}
 /**
  * add_error - Print error if the stack contains less than two elements
  * @line: line
