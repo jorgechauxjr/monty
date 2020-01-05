@@ -75,3 +75,21 @@ void _div(stack_t **top, unsigned int line_number)
 	tmp->n = (tmp->n) / (*top)->n;
 	pop_stack(top, line_number);
 }
+/**
+ * _mul - main entry
+ * Description: multiply the seccond top element of stack and the top element
+ * @top: element at the top of the stack (head)
+ * @line_number: constant int value in the structure
+ * Return: void
+ */
+void _mul(stack_t **top, unsigned int line_number)
+{
+	stack_t *tmp;
+
+	if (*top == NULL || (*top)->next == NULL)
+		mul_error(line_number);
+
+	tmp = (*top)->next;
+	tmp->n *= (*top)->n;
+	pop_stack(top, line_number);
+}
