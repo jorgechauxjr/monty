@@ -23,6 +23,7 @@ void (*get_op_code(char *token, unsigned int line)) (stack_t **, unsigned int)
 		{"mod", _mod},
 		{"rotl", rotl_stack},
 		{"rotr", rotr_stack},
+		{"pchar", _pchar},
 		{NULL, NULL}
 	};
 	for (i = 0; operation[i].opcode != NULL; i++)

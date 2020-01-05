@@ -21,8 +21,8 @@ void _mod(stack_t **top, unsigned int line_number)
 	pop_stack(top, line_number);
 }
 /**
- *rotl_stack -main entry.
- *Description: top element of the stack becomes the last one.
+ * rotl_stack -main entry.
+ * Description: top element of the stack becomes the last one.
  * @top: element at the top of the stack (head)
  * @line_number: constant int value in the structure
  * Return: void
@@ -83,4 +83,30 @@ void _nop(stack_t **top, unsigned int line_number)
 {
 	(void) top;
 	(void) line_number;
+}
+/**
+ * _pchar -main entry.
+ * Description: Prints the char at the top of the stack
+ * @top: element at the top of the stack (head)
+ * @line_number: constant int value in the structure
+ * Return: void
+ **/
+void _pchar(stack_t **top, unsigned int line_number)
+{
+	int ascii_num;
+
+	if (*top == NULL)
+		pchar_error2(line_number);
+
+	ascii_num = (*top)->n;
+
+	if (ascii_num > 0 || ascii_num < 127)
+	{
+		putchar(ascii_num);
+		putchar('\n');
+	}
+	else
+	{
+		pchar_error(line_number);
+	}
 }

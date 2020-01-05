@@ -55,6 +55,9 @@ void div_error(unsigned int line);
 void div_error2(unsigned int line);
 void mul_error(unsigned int line);
 void mod_error(unsigned int line);
+/*error handler4*/
+void pchar_error(unsigned int line);
+void pchar_error2(unsigned int line);
 
 /* executer functions*/
 void open_and_read(char **argv);
@@ -84,5 +87,6 @@ void _mod(stack_t **top, unsigned int line_number);
 void rotl_stack(stack_t **top, unsigned int line_number);
 void rotr_stack(stack_t **top, unsigned int line_number);
 void _nop(stack_t **top, unsigned int line);
+void _pchar(stack_t **top, unsigned int line_number);
 
 #endif /* _MONTY_H_ */
