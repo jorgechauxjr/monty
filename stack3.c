@@ -22,8 +22,7 @@ void _mod(stack_t **top, unsigned int line_number)
 }
 /**
  *rotl_stack -main entry.
- *Description: top element of the stack becomes the last one, and the second
- * top element becomes the first one.
+ *Description: top element of the stack becomes the last one.
  * @top: element at the top of the stack (head)
  * @line_number: constant int value in the structure
  * Return: void
@@ -52,8 +51,7 @@ void rotl_stack(stack_t **top, unsigned int line_number)
 }
 /**
  * rotr_stack -main entry.
- * Description:The last element of the stack
- * becomes the top element of the stack
+ * Description:The last element of the stack becomes the top
  * @top: element at the top of the stack (head)
  * @line_number: constant int value in the structure
  * Return: void
