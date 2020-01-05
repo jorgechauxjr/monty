@@ -66,12 +66,12 @@ void _div(stack_t **top, unsigned int line_number)
 	stack_t *tmp;
 
 	if (*top == NULL || (*top)->next == NULL)
-		div_error(line);
+		div_error(line_number);
 
 	if ((*top)->n == 0)
-		div_error2(line);
+		div_error2(line_number);
 
 	tmp = (*top)->next;
 	tmp->n = (tmp->n) / (*top)->n;
-	pop(top, line);
+	pop_stack(top, line_number);
 }
