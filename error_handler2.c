@@ -34,8 +34,17 @@ void swap_error(unsigned int line)
  * @line: line
  * Return: void
  */
-
 void add_error(unsigned int line)
+{
+	fprintf(stderr, "L%u: can't add, stack too short\n", line);
+	exit(EXIT_FAILURE);
+}
+/**
+ * sub_error - Print error if the stack contains less than two elements
+ * @line: line
+ * Return: void
+ */
+void sub_error(unsigned int line)
 {
 	fprintf(stderr, "L%u: can't add, stack too short\n", line);
 	exit(EXIT_FAILURE);
