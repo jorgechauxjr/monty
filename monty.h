@@ -59,6 +59,7 @@ void mod_error(unsigned int line);
 /* executer functions*/
 void open_and_read(char **argv);
 int is_number(char *token);
+int is_comment(char *token, int line_counter);
 
 /*opcodes */
 void (*get_op_code(char *token, unsigned int line)) (stack_t **, unsigned int);
