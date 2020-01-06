@@ -39,7 +39,7 @@ void rotl_stack(stack_t **top, unsigned int line_number)
 	new_last = *top;
 	tmp = *top;
 
-	while (tmp->next != NULL)
+	while (tmp->next)
 		tmp = tmp->next;
 
 	new_top = (*top)->next;
