@@ -23,6 +23,8 @@ void open_and_read(char **argv)
 	while ((line_size = getline(&buf, &len, fp)) != EOF)
 	{
 		token = strtok(buf, "\n\t\r ");
+		if (token == '\0')
+			continue;
 		strcpy(command, token);
 		if (is_comment(token, line_counter) == 1)
 			continue;
