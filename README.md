@@ -129,4 +129,4 @@ an error occured
 - You have to use malloc and free and are not allowed to use any other function from man malloc (realloc, calloc, )
 
 ### Author
-- **Jorge Chaux **[GitHub](http://www.github.com/jorgechauxjr "GitHub")
+- ** Jorge Chaux **[GitHub](http://www.github.com/jorgechauxjr "GitHub")
