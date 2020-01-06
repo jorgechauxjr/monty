@@ -1,5 +1,5 @@
 #include "monty.h"
-extern int number;
+int number;
 /**
  * open_and_read -main entry.
  *Description:Function that open, read and execute.

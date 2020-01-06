@@ -1,5 +1,5 @@
 #include "monty.h"
-extern int number;
+int number;
 /**
  * push_stack -push (add) node to list.
  *Description: Function that push a new node at the beginning of stack_t stack

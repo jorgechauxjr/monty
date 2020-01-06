@@ -1,5 +1,4 @@
 #include"monty.h"
-int number;
 /**
  * main - Main entry
  * Description: Monty bytecodes files interpreter
