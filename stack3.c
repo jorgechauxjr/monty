@@ -64,7 +64,7 @@ void rotr_stack(stack_t **top, unsigned int line_number)
 	if (*top == NULL || (*top != NULL && (*top)->next == NULL))
 		return;
 	tmp = *top;
-	while (tmp->next != NULL)
+	while (tmp->next)
 		tmp = tmp->next;
 	tmp->prev->next = NULL;
 	tmp->prev = NULL;
